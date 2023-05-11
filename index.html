@@ -1,0 +1,35 @@
+---
+layout: default
+title: Home
+---
+<header>
+        <h1>A Timeline of Campus, Community, and National Events</h1>
+        <strong>Includes media — links to articles, interviews, and photo galleries — from summer 2013 to fall [October] 2016*</strong>
+    </header>
+    <main>
+        <blockquote>
+            <p>“It ain’t complex to put it in context.<br>
+            Find the air beneath the kite, that’s the context.<br>
+            Yeah, baby, I’m conscious. Ain’t no contest.”<br>
+            </p>
+            <cite>—Rapsody, “Complexion (A Zulu Love)”<br>
+            [by Kendrick Lamar], To Pimp A Butterfly, 2015</cite>
+        </blockquote>
+        <div id="introduction">
+            <p>Listed below are selected events from each semester and links to corresponding media, including  the reading list and the corresponding mixtape I wrote and recorded for each term.</p>
+            <p>I arrived in Clemson Wednesday, 10 July 2013.</p>
+        </div>
+        <div id="timeline">
+            <ol>
+{% for event in site.data.owning-my-masters %}
+            <li>
+                <h2>{{ event.Headline }}</h2>
+                <p>{{ event.Text }}</p>
+                <figure>
+                    {{ event.Media }}
+                    <img src="{{ event.Media }}" alt="">
+                </figure>
+{% endfor %}
+        </ol>
+        </div>
+    </main>
